@@ -1,0 +1,71 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    cursor: none;
+}
+
+#canvas {
+}
+
+#toolWheel {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 40%;
+    left: 40%;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 3px solid black;
+    box-shadow: 10px 10px 100px rgb(102, 102, 102);
+}
+
+#pencil, #pen, #eraser, #fill {
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 500ms all;
+}
+
+#pencil {
+    top: -2%;
+    left: -6%;
+}
+
+#pen {
+    top: -6%;
+    left: 50%;
+}
+
+#eraser {
+    left: -6%;
+    top: 50%
+}
+
+#fill {
+    top: 50%;
+    left: 50%;
+}
+
+#pencil:hover, #pen:hover, #eraser:hover, #fill:hover {
+    background-color: rgb(191, 216, 223);
+    scale: 1.05;
+    z-index: 2;
+}
+
+#crosshair {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: none;
+    border: 3px solid black;
+    border-radius: 100%;
+    pointer-events: none;
+    box-shadow: inset 10px 10px 20px rgba(255, 255, 255, 0.4);
+    z-index: 2;
+}

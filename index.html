@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kresleni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="crosshair"></div>
+    <div id="popup" style="visibility: hidden; position: absolute;">
+        <h5>Resize</h5>
+        <p>You will lose all draws u made!</p>
+        <button value="1">Yes</button>
+        <button value="0">No</button>
+    </div>
+    <div id="toolWheel" style="visibility: hidden;">
+        <button value="pencil" id="pencil"><img src="icons/pencil.png" style="width: 50%; left: 30%; position: absolute; top: 30%;"></button>
+        <button value="pen" id="pen"><img src="icons/pen.png" style="width: 50%; left: 10%; position: absolute; top: 40%;"></button>
+        <button value="eraser" id="eraser"><img src="icons/eraser.png" style="width: 40%; left: 40%; position: absolute; top: 20%;"></button>
+        <button value="fill" id="fill"><img src="icons/paint-bucket.png" style="width: 50%; left: 12.5%; position: absolute; top: 12.5%;"></button>
+    </div>
+    <canvas id="canvas" style="border: 3px solid black;"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
