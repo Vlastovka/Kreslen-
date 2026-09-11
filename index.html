@@ -8,13 +8,42 @@
 </head>
 <body>
     <div id="crosshair"></div>
-    <div id="popup" style="visibility: hidden; position: absolute;">
-        <h5>Resize</h5>
-        <p>You will lose all draws u made!</p>
-        <button value="1">Yes</button>
-        <button value="0">No</button>
+    <div id="panel">
+        <div id="colorPanel">
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+        </div>
+        <div id="userColorPanel">
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>
+            <button value=""></button>            
+        </div>
     </div>
-    <div id="toolWheel" style="visibility: hidden;">
+    <div id="colorPickerWindow">
+        <canvas id="colorPickerMain" style="z-index: 2; position: absolute; top: 15%; left: 15%;pointer-events: all;"></canvas>
+        <input type="range" min="0" max="360" id="hueSlider">
+        <button id="confirmButton">confirm</button>
+    </div>
+    <div id="toolWheel">
         <button value="pencil" id="pencil"><img src="icons/pencil.png" style="width: 50%; left: 30%; position: absolute; top: 30%;"></button>
         <button value="pen" id="pen"><img src="icons/pen.png" style="width: 50%; left: 10%; position: absolute; top: 40%;"></button>
         <button value="eraser" id="eraser"><img src="icons/eraser.png" style="width: 40%; left: 40%; position: absolute; top: 20%;"></button>
@@ -22,5 +51,6 @@
     </div>
     <canvas id="canvas" style="border: 3px solid black;"></canvas>
     <script src="script.js"></script>
+    <script src="colorPicker.js"></script>
 </body>
 </html>
