@@ -1,0 +1,94 @@
+{
+    "baseColors": [
+        {
+            "index": 0,
+            "name": "Černá",
+            "hex": "#000000"
+        },
+        {
+            "index": 1,
+            "name": "Bílá",
+            "hex": "#FFFFFF"
+        },
+        {
+            "index": 2,
+            "name": "Šedá",
+            "hex": "#808080"
+        },
+        {
+            "index": 3,
+            "name": "Červená",
+            "hex": "#FF0000"
+        },
+        {
+            "index": 4,
+            "name": "Tmavě červená",
+            "hex": "#800000"
+        },
+        {
+            "index": 5,
+            "name": "Oranžová",
+            "hex": "#FFA500"
+        },
+        {
+            "index": 6,
+            "name": "Žlutá",
+            "hex": "#FFFF00"
+        },
+        {
+            "index": 7,
+            "name": "Zelená",
+            "hex": "#00FF00"
+        },
+        {
+            "index": 8,
+            "name": "Tmavě zelená",
+            "hex": "#008000"
+        },
+        {
+            "index": 9,
+            "name": "Tyrkysová",
+            "hex": "#00FFFF"
+        },
+        {
+            "index": 10,
+            "name": "Modrá",
+            "hex": "#0000FF"
+        },
+        {
+            "index": 11,
+            "name": "Tmavě modrá",
+            "hex": "#000080"
+        },
+        {
+            "index": 12,
+            "name": "Fialová",
+            "hex": "#800080"
+        },
+        {
+            "index": 13,
+            "name": "Purpurová",
+            "hex": "#FF00FF"
+        },
+        {
+            "index": 14,
+            "name": "Růžová",
+            "hex": "#FFC0CB"
+        },
+        {
+            "index": 15,
+            "name": "Hnědá",
+            "hex": "#A52A2A"
+        },
+        {
+            "index": 16,
+            "name": "Béžová",
+            "hex": "#F5F5DC"
+        },
+        {
+            "index": 17,
+            "name": "Zlatá",
+            "hex": "#FFD700"
+        }
+    ]
+}

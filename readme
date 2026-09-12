@@ -1,0 +1,12 @@
+Painting tool in electron.js
+
+install electron first with - "npm install electron --save-dev"
+
+main.js -- file to create window with the app
+
+Public is the main folder of the app.
+Folder icons is for toolWheel
+JS folder is for js scripts
+    script.js - Main part of functions
+    colorPicker.js - color picker for selecting color
+    color converter - Just for converting between hex and rgb and rgb to hex
