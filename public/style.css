@@ -127,6 +127,7 @@ body {
 }
 
 #colorPickerWindow {
+    display: none;
     position: absolute;
     top: 45%;
     left: 40%;
@@ -145,7 +146,7 @@ body {
 #hueSlider {
     position: absolute;
     border: 1px solid rgb(102, 102, 102);
-    bottom: 22%;
+    bottom: 17.5%;
     left: 9.5%;
     appearance: none;
     width: 250px;
@@ -197,6 +198,8 @@ body {
     height: 20px;
     border: 4px solid white;
     z-index: 2;
+    pointer-events: none;
+    display: none;
 }
 
 #rgbValuePreview {
@@ -209,7 +212,7 @@ body {
 }
 
 #rgbValuePreview input {
-    width: 100px;
+    width: 95px;
     height: 30px;
     text-align: right;
     font-size: 20px;
@@ -222,4 +225,25 @@ body {
 
 h6 {
     position: absolute
+}
+
+#gridForBtnColorPicker{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 33px;
+    bottom: 7.5%;
+    left: 10%;
+}
+
+#gridForBtnColorPicker button {
+    border: none;
+    border-radius: 5px;
+    width: 175px;
+    height: 25px;
+    border: 1px solid grey;
+}
+
+#gridForBtnColorPicker button:hover {
+    border: 2px solid grey;
 }

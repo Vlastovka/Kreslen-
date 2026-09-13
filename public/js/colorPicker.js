@@ -62,12 +62,38 @@ function drawColorPicker(){
     ctxColorPicker.fillRect(0,0,250,250)
 }
 
-function updateRGB(r,g,b){
+function updateRGB(){
+    colorPreview.style.background = hexCode.value;
+    hexCode.value = rgbToHex(r,g,b);
     redValue.value = r;
     greenValue.value = g;
     blueValue.value = b;
-
     colorPreview.style.backgroundColor = rgbToHex(r,g,b);
+    if(mouseClickColor) return
+    let saturation = colorClickX / 250;
+    let darkness = colorClickY / 250;
+    let hue = Number(hueSlider.value);
+    let hueColor = hueToRGB(hue);
+    let r1 = redValue.value
+    let g1 = greenValue.value
+    let b1 = blueValue.value
+    r1 = 255 + (hueColor[0] - 255) * saturation;
+    g1 = 255 + (hueColor[1] - 255) * saturation;
+    b1 = 255 + (hueColor[2] - 255) * saturation;
+    r1 = r1 * (1 - darkness);
+    g1 = g1 * (1 - darkness);
+    b1 = b1 * (1 - darkness);
+    r1 = Math.floor(r1);
+    g1 = Math.floor(g1);
+    b1 = Math.floor(b1);
+
+    redValue.value = r1;
+    greenValue.value = g1;
+    blueValue.value = b1;
+
+    colorPreview.style.background = hexCode.value;
+    hexCode.value = rgbToHex(r1,g1,b1);
+    colorPreview.style.backgroundColor = rgbToHex(r1,g1,b1);
 }
 
 function clickDetection(){
@@ -90,7 +116,10 @@ function clickDetection(){
     updateRGB(r,g,b)
     colorPreview.style.backgroundColor = rgbToHex(r, g, b);
     confirmButton.addEventListener("click",() => {
-        color = "#" + hexInput.value;
+        color = rgbToHex(r,g,b)
+        colorPickerWindow.style.display = "none";
+        colorSelectionCrosshair.style.display = "none";
+        mouseClickColor = false;
     })
 }
 

@@ -9,22 +9,39 @@ blueValue.addEventListener("input", (e) => {
     b = Math.max(0, Math.min(255, Number(e.target.value))); updateRGB(r,g,b);
 });
 
-hexInput.addEventListener("input", (e) => {
-    hexInputValue = e.target.value
+hexCode.addEventListener("input", (e) => {
+    hexCode.value = e.target.value
     .replace(/[^0-9A-Fa-f]/g, "")
     .toUpperCase();
-    if(hexInputValue.length === 7){
-        hexInputValue = hexToRGB(hexInputValue)
-        r = hexInputValue[0]
-        g = hexInputValue[1]
-        b = hexInputValue[2]
+    if(hexCode.value.length === 6){
+        let rgb = hexToRGB("#" + hexCode.value)
+        r = rgb[0]
+        g = rgb[1]
+        b = rgb[2]
+        updateRGB()
     }
 });
 
 canvasColorPicker.addEventListener("click", (e) => {
     colorClickX = e.offsetX;
     colorClickY = e.offsetY;
+    mouseClickColor = true;
     clickDetection();
+})
+
+canvasColorPicker.addEventListener("mousemove", (e) => {
+    colorPickerCrosshairX = e.clientX;
+    colorPickerCrosshairY = e.clientY;
+    colorClickX = e.offsetX
+    colorClickY = e.offsetY
+    colorSelectionCrosshair.style.top = colorPickerCrosshairY - 10 + "px";
+    colorSelectionCrosshair.style.left = colorPickerCrosshairX - 10 + "px"
+    updateRGB()
+})
+
+cancelButton.addEventListener("click", () => {
+    colorPickerWindow.style.display = "none";
+    colorSelectionCrosshair.style.display = "none";
 })
 
 // script.js

@@ -36,12 +36,18 @@ const colorPickerWindow = document.getElementById("colorPickerWindow");
 const redValue = document.getElementById("redValue");
 const blueValue = document.getElementById("blueValue");
 const greenValue = document.getElementById("greenValue");
-const hexInput = document.getElementById("hexCode");
+const hexCode = document.getElementById("hexCode");
+const colorSelectionCrosshair = document.getElementById("colorSelectionCrosshair");
+const cancelButton = document.getElementById("cancelButton");
+
+let colorPickerCrosshairX = 0;
+let colorPickerCrosshairY = 0;
+
+let mouseClickColor = false;
 
 let r = 0;
 let g = 0;
 let b = 0;
-let hexInputValue = "#000000";
 
 let colorClickX = 0; 
 let colorClickY = 0;

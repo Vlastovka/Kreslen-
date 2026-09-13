@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="crosshair"></div>
+    <div id="colorSelectionCrosshair"></div>
     <div id="panel">
         <div id="colorPanel">
             <button value=""></button>
@@ -39,31 +40,31 @@
         </div>
     </div>
     <div id="colorPickerWindow">
-        <div id="colorSelectionCrosshair"></div>
         <canvas id="colorPickerMain" style="z-index: 2; position: absolute; top: 15%; left: 15%;pointer-events: all;"></canvas>
         <input type="range" value="0" min="0" max="360" id="hueSlider">
         <span id="colorPreview"></span>
         <div id="rgbValuePreview">
             <div>
-            <h6>Red</h6>
+            <h6 style="top: -52px; font-size: 15px;">Red</h6>
             <input type="number" id="redValue" min="0" max="255" value="0">
             </div>
             <div>
-            <h6>Green</h6>
+            <h6 style="top: 2px; font-size: 15px;">Green</h6>
             <input type="number" id="greenValue" min="0" max="255" value="0">
             </div>
             <div>
-            <h6>Blue</h6>
+            <h6 style="top: 59px; font-size: 15px;">Blue</h6>
             <input type="number" id="blueValue" min="0" max="255" value="0">
             </div>
-            <h6>Hex</h6>
+            <h6 style="top: 115px; font-size: 15px;">Hex</h6>
             <div id="hexInput">
-                <span>#</span>
                 <input type="text" id="hexCode" value="#000000" maxlength="7">
             </div>
         </div>
-        <button id="confirmButton" value="1">OK</button>
-        <button id="cancel" value="0">cancel</button>
+        <div id="gridForBtnColorPicker">
+            <button id="confirmButton" value="1">OK</button>
+            <button id="cancelButton" value="0">cancel</button>
+        </div>
     </div>
     <div id="toolWheel">
         <button value="pencil" id="pencil"><img src="icons/pencil.png" style="width: 50%; left: 30%; position: absolute; top: 30%;"></button>
