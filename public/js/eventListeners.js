@@ -42,6 +42,7 @@ canvasColorPicker.addEventListener("mousemove", (e) => {
 cancelButton.addEventListener("click", () => {
     colorPickerWindow.style.display = "none";
     colorSelectionCrosshair.style.display = "none";
+    actualColor.style.backgroundColor = color;
 })
 
 // script.js
@@ -122,4 +123,8 @@ canvas.addEventListener("mousemove", (e) => {
             mousePosYLast = e.offsetY;
             break;
     }
+})
+
+document.addEventListener("mousemove", () =>{
+    actualColor.style.backgroundColor = color;
 })

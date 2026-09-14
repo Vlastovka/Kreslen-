@@ -247,3 +247,17 @@ h6 {
 #gridForBtnColorPicker button:hover {
     border: 2px solid grey;
 }
+
+#actualColor {
+    position: absolute;
+    width: 52.5%;
+    height: 5%;
+    bottom: 30%;
+    left: 15%;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+#actualColor:hover {
+    cursor: pointer;
+    border: 2px solid rgb(180, 180, 180);
+}

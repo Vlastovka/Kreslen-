@@ -119,8 +119,14 @@ function clickDetection(){
         color = rgbToHex(r,g,b)
         colorPickerWindow.style.display = "none";
         colorSelectionCrosshair.style.display = "none";
+        actualColor.style.backgroundColor = color;
         mouseClickColor = false;
     })
 }
+
+actualColor.addEventListener("click", () => {
+    colorPickerWindow.style.display = "block";
+    colorSelectionCrosshair.style.display = "block";
+})
 
 drawColorPicker()

@@ -25,7 +25,6 @@ let color = "#000000"
 let tool = "pen"
 let drawing = false;
 
-
 // color picker
 
 const canvasColorPicker = document.getElementById("colorPickerMain");
@@ -39,6 +38,9 @@ const greenValue = document.getElementById("greenValue");
 const hexCode = document.getElementById("hexCode");
 const colorSelectionCrosshair = document.getElementById("colorSelectionCrosshair");
 const cancelButton = document.getElementById("cancelButton");
+const actualColor = document.getElementById("actualColor")
+
+actualColor.style.backgroundColor = color;
 
 let colorPickerCrosshairX = 0;
 let colorPickerCrosshairY = 0;
